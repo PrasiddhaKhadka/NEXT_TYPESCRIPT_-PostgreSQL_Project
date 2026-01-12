@@ -3,6 +3,7 @@ import Image  from "next/image";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import { APP_NAME } from "@/lib/constants";
+import ModeToggle from "./mode_toogle";
 
 const Header = () => {
     return <header className="w-full border-b">
@@ -20,6 +21,7 @@ const Header = () => {
 
             {/* BUTTONS */}
             <div className="space-x-2">
+                <ModeToggle />
                 <Button asChild variant='ghost'>
                     <Link href={'/cart'}>
                         <ShoppingCart className="w-5 h-5"/> Cart
